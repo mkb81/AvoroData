@@ -1,0 +1,35 @@
+{
+  "namespace": "example.avro",
+  "type": "record",
+  "name": "User",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string",
+      "doc": "Dog name"
+    },
+    {
+      "name": "id",
+      "type": "string",
+      "logicalType": "UUID",
+      "size" : 36,
+      "doc": "Dog ID"
+    },
+    {
+      "name": "age",
+      "type": [
+        "int",
+        "null"
+      ],
+      "doc": "Dog age [Optional]"
+    },
+    {
+      "name": "color",
+      "type": [
+        "string",
+        "null"
+      ],
+      "doc": "Dog color [Optional]"
+    }
+  ]
+}
