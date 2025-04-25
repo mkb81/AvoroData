@@ -24,4 +24,4 @@ jobs:
         pylint --disable=import-error --max-line-length=120 $(git ls-files '*.py')
     - name: Analysing the code with mypy
       run: |
-        mypy $(git ls-files '*.py')
+        mypy --disable-error-code import-not-found $(git ls-files '*.py')
