@@ -1,0 +1,40 @@
+{
+    "editor.formatOnPaste": true,
+    "editor.defaultFormatter": null,
+    "editor.rulers": [
+        140
+    ],
+    "autoDocstring.docstringFormat": "sphinx-notypes",
+    "black-formatter.args": [
+        "--line-length=140"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.languageServer": "Pylance",
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python3",
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.typeCheckingMode": "standard",
+    "python.analysis.inlayHints.callArgumentNames": "all",
+    "vsicons.presets.foldersAllDefaultIcon": true,
+    "workbench.iconTheme": "vscode-icons",
+    "debugpy.showPythonInlineValues": true,
+    "debug.terminal.clearBeforeReusing": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "isort.args": [
+        "--profile",
+        "black"
+    ],
+    "files.autoSave": "afterDelay",
+    "files.exclude": {
+        "**/__pycache__": true
+    }
+}
