@@ -17,7 +17,7 @@ def open_user_data() -> list[dict]:
 
     :return: User data object
     """
-    with open(file="resources/user.json", mode="r") as file:
+    with open(file="resources/user.json", mode="r", encoding="UTF-8") as file:
         return json.load(fp=file)
 
 
@@ -26,7 +26,7 @@ def get_schema_object() -> Schema:
 
     :return: Avro schema content
     """
-    with open(file="resources/user.avsc", mode="r") as file:
+    with open(file="resources/user.avsc", mode="r", encoding="UTF-8") as file:
         schema_data: str = file.read()
 
     return avro.schema.parse(json_string=schema_data)
@@ -62,7 +62,7 @@ def avro_deserialize(raw_bytes: bytes, avro_schema: Schema) -> dict[str, Any]:
 
 def main() -> None:
     """Entry point"""
-    serialize_data: list[bytes] = list()
+    serialize_data: list[bytes] = []
 
     actual_schema: Schema = get_schema_object()
     print(f"Avro schema: {actual_schema}")
