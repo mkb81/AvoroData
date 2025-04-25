@@ -22,6 +22,10 @@ def open_user_data() -> list[dict]:
 
 
 def get_schema_object() -> Schema:
+    """Open Avro schema file
+
+    :return: Avro schema content
+    """
     with open(file="resources/user.avsc", mode="r") as file:
         schema_data: str = file.read()
 
