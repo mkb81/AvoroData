@@ -76,7 +76,7 @@ def main() -> None:
     print(f"Serialized: {serialize_data}")
 
     for entry in serialize_data:
-        deserialize_data: dict = avro_deserialize(raw_bytes=entry, avro_schema=actual_schema)
+        deserialize_data: dict[str, Any] = avro_deserialize(raw_bytes=entry, avro_schema=actual_schema)
         print(f"Deserialize: {deserialize_data}")
 
 
